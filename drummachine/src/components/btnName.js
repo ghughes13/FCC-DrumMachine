@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class Names extends Component {
-  render() {
+  render(props) {
     return (
-      <div className="">
-
+      <div className="btnName">
+        <p></p>
       </div>
     );
   }

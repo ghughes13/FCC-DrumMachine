@@ -17,25 +17,11 @@ const PowerState = function(props) {
 }
 
 class Power extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      power: false
-    };
-    this.onoff = this.onOff.bind(this);
-  };
-
-  onOff() {
-    this.setState({
-      power: !this.state.power
-    });
-  }
-
-  render() {
+  render(props) {
     return (
-      <div className="">
+      <div className="pwrbtn">
         <p>Power</p>
-        <PowerState power={this.state.power} onOff={this.onOff.bind(this)}/>
+        <PowerState power={this.props.power} onOff={this.props.onOff}/>
       </div>
     );
   }
